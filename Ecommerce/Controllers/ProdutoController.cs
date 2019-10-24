@@ -32,9 +32,18 @@ namespace Ecommerce.Controllers
         [HttpPost]
         public IActionResult Cadastrar(Produto produto)
         {
-            _produtoDAO.CadastrarProduto(produto);
+            if (ModelState.IsValid)
+            {
+                if (_produtoDAO.CadastrarProduto(produto))
+                {
+                    return RedirectToAction("Index");
 
-            return RedirectToAction("Index");
+                }
+                ModelState.AddModelError("", "Produto já cadastrado");
+
+                return View();
+            }
+            return View(produto);
         }
 
         public IActionResult Remover(int? Id)

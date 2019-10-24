@@ -18,10 +18,15 @@ namespace Ecommerce.DAL
             _context = context;        
         }
 
-        public void CadastrarProduto(Produto p)
+        public bool CadastrarProduto(Produto p)
         {
-            _context.Produtos.Add(p);
-            _context.SaveChanges();
+            if (BuscarPorNome(p) == null)
+            {
+                _context.Produtos.Add(p);
+                _context.SaveChanges();
+                return true;
+            }
+            return false;
         }
 
         public List<Produto> Listar()
@@ -62,17 +67,19 @@ namespace Ecommerce.DAL
             _context.SaveChanges();
         }
 
-        internal Produto BuscarPorNome(string nome)
+        internal Produto BuscarPorNome(Produto produto)
         {
+
+            return _context.Produtos.FirstOrDefault(x => x.Nome == produto.Nome);
+
+            /*
             foreach (Produto produto in Listar())
             {
                 if (produto.Nome == nome)
                 {
                     return produto;
                 }
-            }
-
-            return null;
+            }*/
         }
     }
 }

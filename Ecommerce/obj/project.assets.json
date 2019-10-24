@@ -12545,11 +12545,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\1718188\\Downloads\\EcommerceASP.NET-master\\Ecommerce\\Ecommerce.csproj",
+      "projectUniqueName": "C:\\EcommerceASP.NET-master\\Ecommerce\\Ecommerce.csproj",
       "projectName": "Ecommerce",
-      "projectPath": "C:\\Users\\1718188\\Downloads\\EcommerceASP.NET-master\\Ecommerce\\Ecommerce.csproj",
+      "projectPath": "C:\\EcommerceASP.NET-master\\Ecommerce\\Ecommerce.csproj",
       "packagesPath": "C:\\Users\\1718188\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\1718188\\Downloads\\EcommerceASP.NET-master\\Ecommerce\\obj\\",
+      "outputPath": "C:\\EcommerceASP.NET-master\\Ecommerce\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
