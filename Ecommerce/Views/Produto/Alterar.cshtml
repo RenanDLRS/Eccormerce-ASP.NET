@@ -1,0 +1,31 @@
+﻿@model Produto
+
+@{
+}
+
+<form asp-action="Alterar" method="post">
+    <div class="form-group" id="id">
+        <input type="hidden"  asp-for="Id"/><br />
+    </div>
+    <div class="form-group" id="nome">
+        <label>Nome</label><br />
+        <input class="form-control" type="text" asp-for="Nome"/><br />
+    </div>
+
+    <div class="form-group" id="descricao">
+        <label>Descrição</label><br />
+        <input class="form-control" type="text" asp-for="Descricao"/><br />
+    </div>
+
+    <div class="form-group" id="preco">
+        <label>Preço</label><br />
+        <input class="form-control" type="text" asp-for="Preco"/><br />
+    </div>
+
+    <div class="form-group" id="quantidade">
+        <label>Quantidade</label><br />
+        <input class="form-control" type="text" asp-for="Quantidade"/><br /><br />
+    </div>
+
+    <input type="submit" class="btn btn-primary" aria-pressed="false" value="Salvar" />
+</form>
